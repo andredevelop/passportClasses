@@ -1,0 +1,4 @@
+fazer login funcionar ⏰
+fazer pagina do aluno ⏰
+fazer pagina do professor ⏰
+fazer banco de dados ⏰
