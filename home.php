@@ -33,9 +33,8 @@
 </head>
 <body>
 	<base base="<?php echo INCLUDE_PATH ?>" /><!-- base -->
-	<div class="loading"><img src="images/load3.gif"></div><!-- loading -->
 
-	<header class="bgDarkBlue textWhite">
+	<header class="bgRed textWhite">
 		<div class="container dspFlexWrap">
 			<div class="text-header w50">
 				<span <?php echo User::verifyPermission(0); ?>><?php echo $_SESSION['name']; ?> (ADM)</span>
@@ -43,7 +42,6 @@
 			</div><!-- text-header -->
 
 			<div class="header-buttons w50">
-				<a href="boletim" class="textWhite boletim <?php Spawn::selectMenuHead('boletim'); ?>" <?php echo User::verifyPermission(1); ?>>BOLETIM</a>
 				<a href="<?php echo INCLUDE_PATH; ?>home" class="textWhite home-menu <?php Spawn::selectMenuHead('home'); ?>"><i class="fa-solid fa-house"></i></a>
 				<a href="<?php echo INCLUDE_PATH; ?>?loggout" class="textRed"><i class="fa-solid fa-right-from-bracket"></i></a>
 			</div><!-- header-buttons -->
@@ -51,38 +49,6 @@
 	</header>
 
 	<main class="dspFlexNoWrap">
-		
-		<i class="fa-solid fa-bars btn-menu text222"></i>
-
-		<aside class="bgDarkBlue">
-			<i class="fa-solid fa-bars btn-menu text222"></i>
-			
-			<div class="logo bgWhite">
-				<?php
-					if($userImg !== '' && file_exists('uploads/'.$userImg)){
-						echo '<img src='.INCLUDE_PATH.'uploads/'.$_SESSION['image'].'>';
-					}else{
-						echo '<img src='.INCLUDE_PATH.'img/logo.png>';
-					}
-				?>
-			</div><!-- logo -->
-
-			<div class="menu">
-				<div class="<?php Spawn::selectMenuSide('user-profile'); ?>">
-					<a data-id="ico" href="user-profile"><i class="fa-solid fa-user"></i></a>
-					<a data-id="link" href="user-profile">Usuário</a>
-				</div>
-				<div class="<?php Spawn::selectMenuSide('orientador'); ?>">
-					<a data-id="ico" href="orientador"><i class="fa-solid fa-graduation-cap"></i></a>
-					<a data-id="link" href="orientador">Orientador</a>
-				</div>
-				<div class="<?php Spawn::selectMenuSide('mensagens'); ?>">
-					<a data-id="ico" href="mensagens"><i class="fa-sharp fa-solid fa-message"></i></a>
-					<a data-id="link" href="mensagens">Mensagens</a>
-				</div>
-			</div><!-- menu -->
-		</aside>
-		
 		<div class="content">
 			<?php Spawn::spawnPage(); ?>
 		</div><!-- content -->
