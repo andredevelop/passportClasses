@@ -34,7 +34,7 @@
 <body>
 	<base base="<?php echo INCLUDE_PATH ?>" /><!-- base -->
 
-	<header class="bgRed textWhite">
+	<header class="bgYellow text222 box-shadow">
 		<div class="container dspFlexWrap">
 			<div class="text-header w50">
 				<span <?php echo User::verifyPermission(0); ?>><?php echo $_SESSION['name']; ?> (ADM)</span>
@@ -42,18 +42,18 @@
 			</div><!-- text-header -->
 
 			<div class="header-buttons w50">
-				<a href="<?php echo INCLUDE_PATH; ?>home" class="textWhite home-menu <?php Spawn::selectMenuHead('home'); ?>"><i class="fa-solid fa-house"></i></a>
-				<a href="<?php echo INCLUDE_PATH; ?>?loggout" class="textRed"><i class="fa-solid fa-right-from-bracket"></i></a>
+				<a href="<?php echo INCLUDE_PATH; ?>home" class="text222 home-menu <?php Spawn::selectMenuHead('home'); ?>"><i class="fa-solid fa-house"></i></a>
+				<a href="<?php echo INCLUDE_PATH; ?>?loggout" class="text222"><i class="fa-solid fa-right-from-bracket"></i></a>
 			</div><!-- header-buttons -->
 		</div><!-- container -->
 	</header>
 
-	<main class="dspFlexNoWrap">
+	<main class="dspFlexNoWrap bgPastelBlue">
 		<div class="content">
 			<?php Spawn::spawnPage(); ?>
 		</div><!-- content -->
 
-		<div class="upage-arrow bgIndigo textWhite">
+		<div class="upage-arrow bgIndigo text222">
 			<i class="fa-regular fa-up"></i>
 		</div><!-- upage-arrow -->
 	</main>
