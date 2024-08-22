@@ -34,7 +34,7 @@
 <body>
 	<base base="<?php echo INCLUDE_PATH ?>" /><!-- base -->
 
-	<header class="bgYellow text222 box-shadow">
+	<header class="bgF8 text222 box-shadow">
 		<div class="container dspFlexWrap">
 			<div class="text-header w50">
 				<span <?php echo User::verifyPermission(0); ?>><?php echo $_SESSION['name']; ?> (ADM)</span>
@@ -48,7 +48,7 @@
 		</div><!-- container -->
 	</header>
 
-	<main class="dspFlexNoWrap bgPastelBlue">
+	<main class="dspFlexNoWrap bgHardBlue">
 		<div class="content">
 			<?php Spawn::spawnPage(); ?>
 		</div><!-- content -->
